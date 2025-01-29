@@ -9,7 +9,7 @@ const swaggerDefinition = {
     description: 'Real-time epoch time service with REST and WebSocket support',
     contact: {
       name: 'API Support',
-      email: 'your.email@example.com'
+      email: 'tmanzimu@gmail.com'
     }
   },
   servers: [

@@ -3,6 +3,7 @@ import swaggerUi from 'swagger-ui-express';
 import { swaggerSpec } from './config/swagger.config';
 import cors from 'cors';
 import timeRouter from './routes/time';
+import { errorHandler, notFoundHandler } from './middlewares/errorHandlers';
 
 const app = express();
 
@@ -15,5 +16,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Routes
 app.use('/time', timeRouter);
+
+// Error Handlers
+app.use(notFoundHandler);
+app.use(errorHandler);
+
+
 
 export { app };
